@@ -18,9 +18,9 @@ func LoadConfig() structs.Config {
 	dbPassword := os.Getenv("DB_PASSWORD")
 	dbName := os.Getenv("DB_NAME")
 	dbPort := os.Getenv("DB_PORT")
-
+	serverPort := os.Getenv("SERVICE_PORT")
 	config := structs.Config{
-		ServerPort: ":8085",
+		ServerPort: serverPort,
 		Database: structs.Database{
 			Username: dbUsername,
 			Password: dbPassword,
